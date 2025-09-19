@@ -10,6 +10,8 @@ Free and open-source local music player. I have canceled my Spotify subscription
 - last.fm scrobbling support
 - (maybe?) last.fm integration for music discovery, metadata fetching, etc.
 
+![screenshot 1](./screenshots/image.png)
+
 Currently it runs on my macOS, can create a music library from a folder, and play music files one-by-one. That's it. There's still a lot to do, but I use it to listen to a few albums that I own.
 
 I'm also using this project as a "playground" to test some of my approaches to UI design and app architecture.
