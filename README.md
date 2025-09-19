@@ -1,5 +1,8 @@
 # musique
 
+> [!CAUTION]
+> Super early version of the project. Nothing works yet (except for playing files). I'll iterate on this project quickly, as I need it for myself. Use at your own risk.
+
 Free and open-source local music player. I have canceled my Spotify subscription, so I now need something that can play my local music files. I have tried many different apps, but nothing really worked for me. The plan for this project is as follows:
 
 - Simple and clean UI (probably based on m3 expressive) that would be easy to use after Spotify
