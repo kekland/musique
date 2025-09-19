@@ -1,0 +1,25 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    ".dart_tool": true,
+    "*.iml": true,
+    ".idea": true,
+    ".metadata": true
+  },
+  "dart.flutterSdkPath": ".fvm/versions/3.35.3",
+  "editor.rulers": [
+    120
+  ],
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.dart$",
+        "cmd": "python3 tool/generate_ui_exports.py"
+      }
+    ]
+  },
+}

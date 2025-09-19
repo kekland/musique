@@ -1,0 +1,55 @@
+name: musique
+description: "free and open source local music player"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # state management
+  get_it: ^8.2.0
+  provider: ^6.1.5+1
+  flutter_hooks: ^0.20.5
+  signals: ^6.0.2
+  signals_flutter: ^6.0.2
+  signals_hooks: ^0.1.1
+
+  # plugins
+  http: ^1.5.0
+  window_manager: ^0.5.1
+
+  # utils
+  audio_metadata_reader: ^1.4.2
+  colorize: ^3.0.0
+  path_provider: ^2.1.5
+  stack_trace: ^1.12.1
+  logging: ^1.3.0
+
+  # ffi
+  ffi: ^2.1.4
+  objective_c: ^8.1.0
+
+  # db
+  drift: ^2.28.1
+  drift_flutter: ^0.2.5
+
+  # ui
+  material_symbols_icons: ^4.2873.0
+  flutter_resizable_container: ^4.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  drift_dev: ^2.28.2
+  build_runner: ^2.7.1
+  ffigen: ^19.1.0
+
+flutter:
+  uses-material-design: true
