@@ -11,9 +11,9 @@ class MusiqueApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue,
+          seedColor: Colors.pink,
           brightness: Brightness.dark,
-          dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
+          dynamicSchemeVariant: DynamicSchemeVariant.vibrant,
         ),
       ),
       home: HomePage(),

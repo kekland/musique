@@ -14,7 +14,7 @@ Future<void> main() async {
 
   final libraryDirectory = Directory('/Users/kekland/Desktop/Music');
   SignalsObserver.instance = LoggerSignalsObserver();
-  Logger.root.level = kDebugMode ? logging.Level.ALL : logging.Level.INFO;
+  Logger.root.level = kDebugMode ? logging.Level.FINER : logging.Level.INFO;
   Logger.root.onRecord.listen(logColorized);
 
   await setupDi(libraryDirectory);

@@ -25,6 +25,8 @@ headers:
     - '$MACOS_SDK/System/Library/Frameworks/MediaPlayer.framework/Headers/MPMediaItemProperty.h'
     - '$MACOS_SDK/System/Library/Frameworks/NSObject.framework/Headers/NSObject.h'
     - '$MACOS_SDK/System/Library/Frameworks/AppKit.framework/Headers/NSImage.h'
+    - '$MACOS_SDK/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h'
+    - '$MACOS_SDK/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h'
     - 'build/ffigen/*.h'
 
 objc-interfaces:
@@ -32,6 +34,7 @@ objc-interfaces:
     # any classes from musique_darwin-Swift.h should also have a module entry
     - 'MPRemoteCommandCenterListener'
     - 'NSObjectObserver'
+    - 'DispatchQueueShim'
 
     # other classes
     - 'AVAsset'
@@ -40,6 +43,7 @@ objc-interfaces:
     - 'AVQueuePlayer'
     - 'AVPlayerItem'
     - 'AVAudioSession'
+    - 'CMTime'
     - 'MPRemoteCommandCenter'
     - 'MPRemoteCommand'
     - 'MPNowPlayingInfoCenter'
@@ -49,6 +53,12 @@ objc-interfaces:
   module:
     'MPRemoteCommandCenterListener': 'musique'
     'NSObjectObserver': 'musique'
+    'DispatchQueueShim': 'musique'
+
+functions:
+  include:
+    - 'CMTimeMakeWithSeconds'
+    - 'CMTimeGetSeconds'
 
 enums:
   include:
@@ -62,6 +72,8 @@ globals:
     - 'MPMediaItemPropertyAlbumTitle'
     - 'MPMediaItemPropertyPlaybackDuration'
     - 'MPMediaItemPropertyArtwork'
+    - 'MPNowPlayingInfoPropertyElapsedPlaybackTime'
+    - 'MPNowPlayingInfoPropertyPlaybackRate'
 
 preamble: |
   // Generated file, do not edit.

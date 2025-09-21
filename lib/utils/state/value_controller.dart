@@ -102,10 +102,12 @@ mixin SingleSource<T> on ValueController<T> {
 mixin PaginatedSource<T, P> on ListValueController<T> {
   late final _paginationKey = $signal<P?>(null);
   late final hasMoreSignal = $computed<bool>(() => valueSignal.value == null || _paginationKey.value != null);
+  late final _totalCount = $signal<int?>(null);
 
   bool get hasMore => hasMoreSignal.value;
+  int? get totalCount => _totalCount.value;
 
-  Future<(List<T> items, P? nextPageToken)> performLoad(P? token);
+  Future<(List<T> items, P? nextPageToken, int? totalCount)> performLoad(P? token);
 
   var _isRefreshing = false;
 
@@ -120,6 +122,7 @@ mixin PaginatedSource<T, P> on ListValueController<T> {
       final result = await performLoad(null);
       valueSignal.value = result.$1;
       _paginationKey.value = result.$2;
+      _totalCount.value = result.$3;
       errorSignal.value = null;
     } catch (e, stackTrace) {
       errorSignal.value = (e, stackTrace);
@@ -142,6 +145,7 @@ mixin PaginatedSource<T, P> on ListValueController<T> {
       final result = await performLoad(_paginationKey.value);
       valueSignal.value = [...?valueSignal.value, ...result.$1];
       _paginationKey.value = result.$2;
+      _totalCount.value = result.$3;
     } catch (e, stackTrace) {
       errorSignal.value = (e, stackTrace);
       // TODO: Show error toast here or something

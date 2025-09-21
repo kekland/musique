@@ -18,25 +18,25 @@ class HomePage extends StatelessWidget {
           DragToMoveArea(
             child: Container(
               height: 56.0,
-              child: Center(
-                child: SizedBox(
-                  width: 360.0,
-                  height: 40.0,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: context.colorScheme.surfaceContainer,
-                      prefixIcon: Icon(Symbols.search_rounded),
-                      hintText: 'Search...',
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 12.0),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                        borderSide: BorderSide.none,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              // child: Center(
+              //   child: SizedBox(
+              //     width: 360.0,
+              //     height: 40.0,
+              //     child: TextField(
+              //       decoration: InputDecoration(
+              //         filled: true,
+              //         fillColor: context.colorScheme.surfaceContainer,
+              //         prefixIcon: Icon(Symbols.search_rounded),
+              //         hintText: 'Search...',
+              //         contentPadding: const EdgeInsets.symmetric(horizontal: 12.0),
+              //         border: OutlineInputBorder(
+              //           borderRadius: BorderRadius.circular(16.0),
+              //           borderSide: BorderSide.none,
+              //         ),
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ),
           ),
           Expanded(

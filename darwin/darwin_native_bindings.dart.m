@@ -11,6 +11,8 @@
 #import <MediaPlayer/MPNowPlayingInfoCenter.h>
 #import <MediaPlayer/MPMediaItem.h>
 #import <AppKit/NSImage.h>
+#import <CoreMedia/CMTime.h>
+#import <Foundation/Foundation.h>
 #import "../build/ffigen/musique_darwin-Swift.h"
 
 #if !__has_feature(objc_arc)

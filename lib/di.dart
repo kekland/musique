@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:get_it/get_it.dart';
 import 'package:musique/imports.dart';
-import 'package:musique/services/music_library_service.dart';
+import 'package:musique/services/library/music_library_service.dart';
 import 'package:musique/services/player/music_player_service.dart';
 
 final di = GetIt.instance;

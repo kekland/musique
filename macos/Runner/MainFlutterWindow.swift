@@ -33,7 +33,7 @@ class MainFlutterWindow: NSWindow {
     zoomButton.translatesAutoresizingMaskIntoConstraints = false
 
     let verticalCenterY: CGFloat = 28.0
-    let leadingPadding: CGFloat = 12.0
+    let leadingPadding: CGFloat = 16.0
     let buttonSpacing: CGFloat = 6.0
 
     NSLayoutConstraint.activate([
