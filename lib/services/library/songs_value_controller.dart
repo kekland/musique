@@ -1,6 +1,5 @@
 import 'package:drift/drift.dart';
 import 'package:musique/imports.dart';
-import 'package:musique/utils/db/db_paginated_value_controller.dart';
 
 abstract class SongsValueController extends DbPaginatedValueController<Song, $SongsTable> {
   SongsValueController({

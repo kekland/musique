@@ -21,7 +21,7 @@ def compile_darwin_objc_headers():
     file.unlink()
 
 def run_ffigen():
-  exec_cmd('fvm dart run ffigen --config ffigen.yaml')
+  exec_cmd('fvm dart run ffigen --config ffigen.darwin.yaml')
 
 if __name__ == '__main__':
   compile_darwin_objc_headers()

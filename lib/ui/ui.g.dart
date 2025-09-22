@@ -4,6 +4,8 @@
 // ignore_for_file: unused_import, library_prefixes
 export 'package:musique/ui/ui.dart';
 export 'package:musique/ui/ui.g.dart';
+export 'package:musique/ui/utils/separated_sliver_child_builder_delegate.dart';
 export 'package:musique/ui/display/expressive_progress_bar.dart';
 export 'package:musique/ui/display/db_image.dart';
+export 'package:musique/ui/transitions/material_page_transitions_builder.dart';
 export 'package:musique/ui/data/default_value_controller_builders.dart';

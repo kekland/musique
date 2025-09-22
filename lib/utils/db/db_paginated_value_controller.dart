@@ -18,12 +18,20 @@ abstract class DbPaginatedValueController<TItem, TTbl extends TableInfo> extends
 
   @override
   Future<(List<TItem>, int?, int?)> performLoad(int? token) async {
-    final countQuery = table.count(where: where as dynamic);
+    final _where = where != null ? (t) => where!(t) : null;
+    final _orderBy = orderBy
+        ?.map(
+          (v) =>
+              (t) => v(t),
+        )
+        .toList();
+
+    final countQuery = table.count(where: _where);
     final count = await countQuery.getSingle();
 
     final query = table.select();
-    if (where != null) query.where(where! as dynamic);
-    if (orderBy != null) query.orderBy(orderBy! as dynamic);
+    if (where != null) query.where(_where!);
+    if (orderBy != null) query.orderBy(_orderBy!);
     query.limit(pageSize, offset: token);
 
     final items = await query.get();
